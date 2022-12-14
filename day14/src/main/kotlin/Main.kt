@@ -28,14 +28,13 @@ fun Point.pathTo(other: Point): Sequence<Point> {
     }
 }
 
-fun Point.fall() : List<Point> {
+fun Point.fall(): List<Point> {
     return listOf(
         Point(first, second + 1),
         Point(first - 1, second + 1),
         Point(first + 1, second + 1),
     )
 }
-
 
 fun main() {
     val input = generateSequence(::readLine).map(String::toPath).toList()
